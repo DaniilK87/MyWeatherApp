@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cityName">
+    <item>Уфа</item>
+    <item>Казань</item>
+    <item>Москва</item>
+    </string-array>
+    <array name="coat_of_arms">
+        <item>@drawable/ufa</item>
+        <item>@drawable/kazan</item>
+        <item>@drawable/moscow</item>
+    </array>
+
+</resources>
