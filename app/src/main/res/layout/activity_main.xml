@@ -7,15 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="10dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/cityName"
-        app:layout_constraintStart_toStartOf="@+id/cityName"
-        app:layout_constraintTop_toBottomOf="@+id/cityName">
+        app:layout_constraintEnd_toEndOf="@+id/imageWeather"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="@+id/imageWeather"
+        app:layout_constraintTop_toBottomOf="@+id/imageWeather">
 
         <ImageView
             android:layout_width="88dp"
@@ -32,15 +37,17 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="139dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -54,13 +61,13 @@
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/black"
-            android:text="@string/wind_text" />
+            android:text="@string/wind_text"
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="88dp"
             android:layout_height="match_parent"
-            android:src="@drawable/outline_monitor_weight_24"/>
+            android:src="@drawable/outline_monitor_weight_24" />
 
         <TextView
             android:id="@+id/press"
@@ -76,14 +83,24 @@
         android:id="@+id/cityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:layout_marginBottom="32dp"
         android:text="@string/city_name_text"
         android:textColor="@color/black"
         android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageWeather"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        app:layout_constraintEnd_toEndOf="@+id/cityName"
+        app:layout_constraintStart_toStartOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/cityName"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
