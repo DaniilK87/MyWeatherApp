@@ -8,4 +8,9 @@
     <string name="show_button">Показать</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">Настройки</string>
+    <string name="developer">О разработчике</string>
+    <string name="write_to_us">Напишите нам</string>
+    <string name="dev_info_head">О разработчике</string>
+    <string name="auth">Auth</string>
 </resources>

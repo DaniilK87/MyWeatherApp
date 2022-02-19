@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cityName">
-    <item>Уфа</item>
-    <item>Казань</item>
-    <item>Москва</item>
+        <item>London</item>
+        <item>Paris</item>
+        <item>Madrid</item>
+        <item>Milan</item>
+        <item>Amsterdam</item>
+        <item>Berlin</item>
+        <item>Rome</item>
+        <item>Prague</item>
+        <item>Vein</item>
+        <item>Monaco</item>
+
     </string-array>
     <array name="coat_of_arms">
-        <item>@drawable/ufa</item>
-        <item>@drawable/kazan</item>
-        <item>@drawable/moscow</item>
+        <item>@drawable/london_city_coa</item>
+        <item>@drawable/paris_city_coa</item>
+        <item>@drawable/madrid_city_coa</item>
+        <item>@drawable/milano_city_coa</item>
+        <item>@drawable/amsterdam_city_coa</item>
+        <item>@drawable/berlin_city_coa</item>
+        <item>@drawable/roma_city_coa</item>
+        <item>@drawable/prague_city_coa</item>
+        <item>@drawable/vienna_city_coa</item>
+        <item>@drawable/monaco_city_coa</item>
     </array>
 
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/settings"
+        android:id="@+id/settings"
+        android:orderInCategory="10"/>
+    <item
+        android:title="@string/developer"
+        android:id="@+id/developer"
+        android:orderInCategory="20"/>
+    <item
+        android:title="@string/write_to_us"
+        android:id="@+id/write_to_us"
+        android:orderInCategory="30"/>
+</menu>

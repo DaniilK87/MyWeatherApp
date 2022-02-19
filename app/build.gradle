@@ -42,6 +42,15 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     //CardView
     implementation "androidx.cardview:cardview:1.0.0"
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.21"
+    //Auth
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
 
 
 }

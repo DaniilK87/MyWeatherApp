@@ -13,7 +13,7 @@ public class CitySource {
     private Resources resources;
 
     public CitySource(Resources resources) {
-        citySource = new ArrayList<>(3);
+        citySource = new ArrayList<>(10);
         this.resources = resources;
     }
 

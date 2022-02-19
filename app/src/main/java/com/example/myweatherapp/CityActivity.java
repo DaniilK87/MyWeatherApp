@@ -12,11 +12,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.myweatherapp.data.City;
+import com.example.myweatherapp.data.CityList;
 import com.example.myweatherapp.data.CitySource;
-import com.example.myweatherapp.data.Constants;
+import com.example.myweatherapp.ui.FABCity;
 import com.example.myweatherapp.ui.RVAdapter;
-
 
 public class CityActivity extends AppCompatActivity {
 
@@ -32,7 +31,11 @@ public class CityActivity extends AppCompatActivity {
 
         CitySource citySource = new CitySource(getResources());
         initRecyclerView(citySource.build());
+
+        FABCity fabCity = new FABCity();
+        fabCity.click(findViewById(R.id.fabCity));
     }
+
 
         private void initRecyclerView(CitySource citySource){
             RecyclerView recyclerView = findViewById(R.id.rvList);
@@ -49,53 +52,63 @@ public class CityActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 switch (position) {
-                    case 0: city1();break;
-                    case 1: city2();break;
-                    case 2: city3();break;
+                    case 0: {RVCity rvCity = new RVCity();
+                    rvCity.londonCity(getApplicationContext());
+                        break;
+                    }
+                    case 1: {RVCity rvCity1 = new RVCity();
+                        rvCity1.parisCity(getApplicationContext());
+                        break;
+                    }
+                    case 2: {RVCity rvCity = new RVCity();
+                        rvCity.madridCity(getApplicationContext());
+                        break;
+                    }
+                    case 3: {RVCity rvCity = new RVCity();
+                        rvCity.berlinCity(getApplicationContext());
+                        break;
+                    }
+                    case 4: {RVCity rvCity = new RVCity();
+                        rvCity.amsterdamCity(getApplicationContext());
+                        break;
+                    }
+                    case 5: {RVCity rvCity = new RVCity();
+                        rvCity.veinCity(getApplicationContext());
+                        break;
+                    }
+                    case 6: {RVCity rvCity = new RVCity();
+                        rvCity.milanCity(getApplicationContext());
+                        break;
+                    }
+                    case 7: {RVCity rvCity = new RVCity();
+                        rvCity.monacoCity(getApplicationContext());
+                        break;
+                    }
+                    case 8: {RVCity rvCity = new RVCity();
+                        rvCity.romeCity(getApplicationContext());
+                        break;
+                    }
+                    case 9: {RVCity rvCity = new RVCity();
+                        rvCity.pragueCity(getApplicationContext());
+                        break;
+                    }
+
+                    }
                 }
-            }
         });
     }
 
 
-
     public void onShowButtonClick(View view) {
+        CityList cityList = new CityList();
         inputCity = findViewById(R.id.etInputCity);
-        Log.d(TAG, "onShowButtonClick");
-       switch (inputCity.getText().toString()) {
-           case Constants.CITY1:
-                city1();
-                break;
-           case Constants.CITY2:
-                city2();
-                break;
-           case Constants.CITY3:
-                city3();
-                break;
-            default:
-                Toast.makeText(this,"NO CITY",Toast.LENGTH_LONG).show();
-                break;
+        for (String city: cityList.getCityList()) {
+            if (inputCity.getText().toString().equals(city)) {
+                Intent intent = new Intent(this,MainActivity.class);
+                intent.putExtra(Constants.CITY,city);
+                startActivity(intent);
+            }
+            // тут подумать над колбэком
         }
-    }
-
-   private void city1() {
-        City city = new City("Ufa","02","02","02");
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra(City.class.getSimpleName(), city);
-        startActivity(intent);
-    }
-
-    private void city2() {
-        City city = new City("Kazan","16","16","16");
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra(City.class.getSimpleName(), city);
-        startActivity(intent);
-    }
-
-    private void city3() {
-        City city = new City("Moscow","77","77","77");
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra(City.class.getSimpleName(), city);
-        startActivity(intent);
     }
 }
